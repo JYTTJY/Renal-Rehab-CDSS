@@ -9,23 +9,12 @@
 
 > **In one sentence:** a physiotherapist enters a patient's vitals, blood results and symptoms, and the app answers three questions in seconds: *Is it safe to exercise today? What should I do next if not? What exercise prescription fits this patient?* It then produces a printable clinical record.
 
-**[Live demo](https://YOUR-ACCOUNT.shinyapps.io/YOUR-APP/)** (simulated data only, see [Data and privacy](#data-safety-and-privacy)) | [Guideline basis](#clinical-and-evidence-basis) | [Quick start](#quick-start)
-
 ---
 
 ## Screenshots
-
-> Replace the files below with your own screenshots (use simulated patients only) and keep them in `docs/screenshots/`.
-
-| Pre-test safety screening and FITT | Post-exercise discharge check |
-|---|---|
-| ![Pre-test screen](docs/screenshots/01-pre-test.png) | ![Post-test screen](docs/screenshots/02-post-test.png) |
-
-| Longitudinal trends | Printable clinical report |
-|---|---|
-| ![Trends](docs/screenshots/03-trends.png) | ![Report](docs/screenshots/04-report.png) |
-
----
+Pre-test safety screening and FITT 
+Post-exercise discharge check 
+Longitudinal trends 
 
 ## Why it matters
 
