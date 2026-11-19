@@ -9,6 +9,9 @@
 
 > **In one sentence:** a physiotherapist enters a patient's vitals, blood results and symptoms, and the app answers three questions in seconds: *Is it safe to exercise today? What should I do next if not? What exercise prescription fits this patient?* It then produces a printable clinical record.
 
+
+> **Live demo:** [(https://greencare-physio.shinyapps.io/Renal_Rehab_CDSS/)](https://greencare-physio.shinyapps.io/Renal_Rehab_CDSS/)
+
 ---
 
 ## Screenshots
