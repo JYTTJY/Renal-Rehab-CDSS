@@ -16,8 +16,13 @@
 
 ## Screenshots
 Pre-test safety screening and FITT 
+<img width="939" height="440" alt="image" src="https://github.com/user-attachments/assets/561abbd8-e3cd-47e9-8e3b-ad843cbf3ae2" />
+
 Post-exercise discharge check 
+<img width="935" height="434" alt="image" src="https://github.com/user-attachments/assets/1714745d-5ca5-42ad-b7e0-2dc990d05de2" />
+
 Longitudinal trends 
+<img width="930" height="439" alt="image" src="https://github.com/user-attachments/assets/d61eb3ba-fc67-464f-bd4a-124982eada43" />
 
 ## Why it matters
 
