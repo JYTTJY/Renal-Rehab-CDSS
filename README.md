@@ -9,20 +9,20 @@
 
 > **In one sentence:** a physiotherapist enters a patient's vitals, blood results and symptoms, and the app answers three questions in seconds: *Is it safe to exercise today? What should I do next if not? What exercise prescription fits this patient?* It then produces a printable clinical record.
 
-
-> **Live demo:** [https://greencare-physio.shinyapps.io/Renal_Rehab_CDSS/](https://greencare-physio.shinyapps.io/Renal_Rehab_CDSS/)
+> **Live demo:** [Launch Interactive App (shinyapps.io)](https://greencare-physio.shinyapps.io/Renal_Rehab_CDSS/)
 
 ---
 
 ## Screenshots
-Pre-test safety screening and FITT 
-<img width="939" height="440" alt="image" src="https://github.com/user-attachments/assets/561abbd8-e3cd-47e9-8e3b-ad843cbf3ae2" />
 
-Post-exercise discharge check 
-<img width="935" height="434" alt="image" src="https://github.com/user-attachments/assets/1714745d-5ca5-42ad-b7e0-2dc990d05de2" />
+**Pre-test safety screening and FITT**
+<img width="939" height="440" alt="Pre-test safety screening and FITT" src="https://github.com/user-attachments/assets/561abbd8-e3cd-47e9-8e3b-ad843cbf3ae2" />
 
-Longitudinal trends 
-<img width="930" height="439" alt="image" src="https://github.com/user-attachments/assets/d61eb3ba-fc67-464f-bd4a-124982eada43" />
+**Post-exercise discharge check**
+<img width="935" height="434" alt="Post-exercise discharge check" src="https://github.com/user-attachments/assets/1714745d-5ca5-42ad-b7e0-2dc990d05de2" />
+
+**Longitudinal trends**
+<img width="930" height="439" alt="Longitudinal trends" src="https://github.com/user-attachments/assets/d61eb3ba-fc67-464f-bd4a-124982eada43" />
 
 ## Why it matters
 
@@ -68,7 +68,7 @@ The decision rules in `logic.R` follow published guidance. Where no internationa
 | eGFR | CKD-EPI 2021 equation (race-free) |
 | Functional norms | CDC STEADI chair-stand norms; EWGSOP2 handgrip cut-offs |
 
-Please read the [limitations](#limitations-and-disclaimer) before any clinical use.
+Please read the [limitations and disclaimer](#limitations-and-disclaimer) before any clinical use.
 
 ## Technical stack
 
@@ -80,7 +80,7 @@ Please read the [limitations](#limitations-and-disclaimer) before any clinical u
   - `app.R`: user interface, input validation, data storage and the printable report.
 - **Storage:** plain local CSV files; no external database or network calls.
 
-```
+```text
 .
 ├── app.R              # Shiny UI, server, validation, report
 ├── logic.R            # Clinical rules and thresholds (with a source table)
@@ -88,54 +88,3 @@ Please read the [limitations](#limitations-and-disclaimer) before any clinical u
 │   └── logo.png       # Optional letterhead logo for the printed report
 ├── data/              # Created at runtime (see "Data safety and privacy")
 └── CKD_CDSS_Project.Rproj
-```
-
-## Data safety and privacy
-
-- **No real patient data is shipped with this repository.** The trend page shows clearly labelled **DEMO DATA** (simulated) until real sessions are saved for a given MRN.
-- **Minimum data stored.** Local CSV files in `data/` hold the MRN, clinical values and decisions. **Patient name and IC / passport number are never written to disk**; they appear only on screen and in the printed report.
-- **No external services.** The app does not send data anywhere.
-- **Do not enter real patient data into a public demo.** A public host such as shinyapps.io is not a hospital-approved system. Use simulated patients for demonstrations. For clinical use, deploy only inside your organisation's approved environment and follow local information-governance rules.
-- Add `data/` to your `.gitignore` so that saved records are never committed:
-
-```gitignore
-data/
-.Rproj.user/
-.Rhistory
-```
-
-## Quick start
-
-**Online:** open the [live demo](https://YOUR-ACCOUNT.shinyapps.io/YOUR-APP/). No installation needed.
-
-**Locally:**
-
-```bash
-# 1. Clone
-git clone https://github.com/YOUR-USERNAME/YOUR-REPO.git
-cd YOUR-REPO
-```
-
-```r
-# 2. Install dependencies (once)
-install.packages(c("shiny", "shinydashboard", "shinyBS", "plotly", "DT"))
-
-# 3. Run (from the project folder)
-shiny::runApp()
-```
-
-Or open `CKD_CDSS_Project.Rproj` in RStudio, open `app.R` and click **Run App**.
-
-## Disclaimer
-
-- **Decision support only.** This tool does not replace clinical judgement or local protocols, and it is **not a certified medical device**.
-- **Prototype.** It has not been clinically validated, and a formal clinical safety assessment has not been carried out.
-- **Draft content needs approval.** The "next steps" guidance for stop reasons is draft content that must be reviewed and approved by your nephrology / medical team before clinical use.
-- **Clinician decisions are flagged.** Some actions (for example holding exercise at potassium of 6.0 mmol/L or above, or haemoglobin below 8 g/dL) rest on severity classifications rather than an exercise-specific guideline value. They are marked as clinician decisions in the in-app source table.
-- **Guideline currency.** The UKKA exercise and lifestyle guideline (final version April 2021) lists a review date of April 2026. Check for a newer version and re-verify the thresholds before relying on them.
-- **Peritoneal dialysis** advice follows expert consensus (ISPD / GREX 2022), not UKKA, and should be checked against the source document and local practice.
-
-
-## Acknowledgements
-
-Built on the UKKA / Renal Association exercise guideline authors' work (Baker LA, March DS, Wilkinson TJ, et al.), and on the ACSM, ADA, WHO, ISPD and GREX resources cited above.
